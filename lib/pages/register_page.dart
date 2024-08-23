@@ -9,6 +9,7 @@ class RegisterPage extends StatelessWidget {
   final TextEditingController _passwordcontroller = TextEditingController();
   final TextEditingController _confirmpasswordcontroller =
       TextEditingController();
+  final TextEditingController _usernamecontroller = TextEditingController();
   final void Function()? onTap;
   void register() {}
 
@@ -25,6 +26,12 @@ class RegisterPage extends StatelessWidget {
                 fontSize: 50, color: Theme.of(context).colorScheme.primary),
           ),
           const SizedBox(height: 25),
+          MyInputField(
+            obscureText: false,
+            controller: _usernamecontroller,
+            hintText: "Enter the Username",
+          ),
+          const SizedBox(height: 10),
           // email input
           MyInputField(
             obscureText: false,
